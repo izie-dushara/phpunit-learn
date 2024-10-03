@@ -10,7 +10,7 @@ class DependenciesTest extends TestCase
 	 * This is the first test method, which initializes $value to 1.
 	 * It also returns this value so that dependent tests can use it.
 	 */
-	public function testFirstTest()
+	public function testFirstTest(): int
 	{
 		$this->value = 1; // Set $value to 1.
 		$this->assertEquals(1, $this->value); // Assert that $value is equal to 1.
@@ -22,7 +22,7 @@ class DependenciesTest extends TestCase
 	 * This test method depends on the result of testFirstTest.
 	 * It receives the return value of testFirstTest as an argument.
 	 */
-	public function testDependency1($value)
+	public function testDependency1(int $value): int
 	{
 		$value++; // Increment the value returned by testFirstTest.
 
@@ -39,7 +39,7 @@ class DependenciesTest extends TestCase
 	 * This test method depends on the result of testDependency1.
 	 * It receives the return value of testDependency1 as an argument.
 	 */
-	public function testDependecy2($value)
+	public function testDependecy2(int $value): void
 	{
 		$value++; // Increment the value returned by testDependency1.
 

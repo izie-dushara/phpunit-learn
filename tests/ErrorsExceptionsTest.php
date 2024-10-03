@@ -33,7 +33,7 @@ class ErrorsExceptionsTest extends TestCase
 	 * This test is used to expect exceptions.
 	 * The `expectException()` method tells PHPUnit to expect a specific exception during the execution of the test.
 	 */
-	public function testException()
+	public function testException(): void
 	{
 		// Expect an exception of type `WrongBmiDataException`.
 		$this->expectException(WrongBmiDataException::class);
