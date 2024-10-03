@@ -22,10 +22,15 @@ class UsefulAssertionsTest extends TestCase
 		$this->assertEquals($expected, $result);
 	}
 
-	// Use to check if an array is empty
+	// Use to check if a variable is empty (default value)
 	public function testAssertEmpty()
 	{
 		$this->assertEmpty(['foo']);
+		// $this->assertEmpty(0);
+		// $this->assertEmpty(null);
+		// $this->assertEmpty('');
+		
+
 	}
 
 	// Use to check if a variable is null
