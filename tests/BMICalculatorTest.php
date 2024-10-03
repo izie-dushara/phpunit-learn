@@ -4,7 +4,7 @@ use PHPUnit\Framework\TestCase;
 
 class BMICalcultorTest extends TestCase
 {
-	public function testUnderWeightBMITextResult()
+	public function testShowsUnderweightBmiLessThan18()
 	{
 		$BMICalculator = new BMICalculator();
 		$BMICalculator->BMI = 10;
@@ -14,7 +14,7 @@ class BMICalcultorTest extends TestCase
 		$this->assertSame($expected, $result); //Expected, Result
 	}
 
-	public function testNormalWeightBMITextResult()
+	public function testShowsNormalWhenBmiBetween18To25()
 	{
 		$BMICalculator = new BMICalculator();
 		$BMICalculator->BMI = 20;
@@ -24,7 +24,7 @@ class BMICalcultorTest extends TestCase
 		$this->assertSame($expected, $result); //Expected, Result
 	}
 
-	public function testOverWeightBMITextResult()
+	public function testShowsOverweightWhenBmiGreaterThan25()
 	{
 		$BMICalculator = new BMICalculator();
 		$BMICalculator->BMI = 35;
@@ -34,7 +34,7 @@ class BMICalcultorTest extends TestCase
 		$this->assertSame($expected, $result); //Expected, Result
 	}
 
-	public function testCorrectBMIValue()
+	public function testCanCalculateCorrectBmi()
 	{
 		$expected = 39.1;
 		$BMICalculator = new BMICalculator();

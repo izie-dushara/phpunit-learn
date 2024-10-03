@@ -1,0 +1,6 @@
+BMICalcultor
+ [x] Shows underweight bmi less than 18
+ [x] Shows normal when bmi between 18 to 25
+ [x] Shows overweight when bmi greater than 25
+ [x] Can calculate correct bmi
+
